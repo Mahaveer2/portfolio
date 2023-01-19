@@ -33,6 +33,10 @@ To create a production version of your app:
 npm run build
 ```
 
+You also need sanity to manage content
+Create A sanity schema of projects,banner & Gallery
+and connect to svelte
+
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
