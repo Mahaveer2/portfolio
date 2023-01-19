@@ -1,7 +1,6 @@
 <script>
 	export let data;
 	const { projects } = data;
-	console.log(projects);
 	import Card from '$lib/components/Card.svelte';
 	import PageTransition from '../lib/components/PageTransition.svelte';
 </script>

@@ -8,9 +8,8 @@
     <div class="content">
       <h1 class="title" >{title}</h1>
       <div class="p-p">
-        <p>{description}</p>
+        <p>{description}<a href={link} class="btn primary">view demo</a></p>
       </div>
-      <a href={link} class="btn primary">view demo</a>
     </div>
   </div>
 </div>
