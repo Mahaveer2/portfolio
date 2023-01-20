@@ -339,8 +339,27 @@ body{
 .btn{
   background-color: $mute;
   color: #fff;
+  border: none;
+  font-size: 18px;
   text-decoration: none;
   border-radius: $radius;
   padding: 14px 20px;
+  transition: .2s ease;
   cursor: pointer;
+  filter: brightness(80%);
+
+  &:hover{
+    filter: brightness(120%);
+  }
+
+  &.block{
+    width: 100%;
+  }
+}
+
+.success-alert{
+  padding: 10px 20px;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  border-radius: $radius;
 }

@@ -1,7 +1,20 @@
 <script>
 	import { enhance } from '$lib/form';
 	import PageTransition from '../../lib/components/PageTransition.svelte';
-	let message = '';
+	import emailjs from '@emailjs/browser';
+	let message = "";
+
+	function sendEmail(e) {
+		e.preventDefault();
+    emailjs.sendForm('service_9wr4st9', 'template_9bxgq3t', e.target,'kEDU61bozJ8RGniyY')
+      .then((result) => {
+				message = "Message sent succesfully!";
+					e.target.reset();
+					setTimeout(() => message = "",3000)
+      }, (error) => {
+          console.log('FAILED...', error.text);
+      });
+  }
 </script>
 
 <svelte:head>
@@ -9,13 +22,23 @@
 </svelte:head>
 <PageTransition>
 	<h1>Contact me</h1>
-	<form use:enhance method="POST" action="/api/contact" class="contact-form">
+	{#if message}
+	<PageTransition>
+		<div class="success-alert">{message}</div>
+	</PageTransition>
+	{/if}
+	<form on:submit|preventDefault={e => sendEmail(e)} class="contact-form">
 		<p class="description">
 			Feel free to contact us if you need any assistance, any help or another question.
 		</p>
 		<div>
+			<input required type="text" placeholder="Enter Your Name">
+		</div>
+		<div>
+			<input required type="email" placeholder="Enter Your Email">
+		</div>
+		<div>
 			<textarea
-				bind:value={message}
 				id="message"
 				name="message"
 				class="form-control rounded border-white mb-3 form-text-area"
@@ -26,12 +49,7 @@
 			/>
 		</div>
 		<div class="submit-button-wrapper">
-			<a
-				on:click={() => (message = '')}
-				class="btn"
-				href="mailto:amrani.mahaveer223@gmail.com?subject=Contact Information&body={message}"
-				>Submit</a
-			>
+			<button class="btn block">Contact</button>
 		</div>
 	</form>
 </PageTransition>
