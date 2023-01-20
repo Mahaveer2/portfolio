@@ -32,10 +32,10 @@
 			Feel free to contact us if you need any assistance, any help or another question.
 		</p>
 		<div>
-			<input required type="text" placeholder="Enter Your Name">
+			<input required type="text" name="name" placeholder="Enter Your Name">
 		</div>
 		<div>
-			<input required type="email" placeholder="Enter Your Email">
+			<input required type="email" name="email" placeholder="Enter Your Email">
 		</div>
 		<div>
 			<textarea
