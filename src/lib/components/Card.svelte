@@ -8,7 +8,7 @@
     <div class="content">
       <h1 class="title" >{title}</h1>
       <div class="p-p">
-        <p>{description}<a href={link} class="btn primary" style="background-color: #fff !important;color:#000 !important;">view demo</a></p>
+        <div style="display:flex;flex-direction:column"><p>{description}</p><a href={link} class="btn primary" style="background-color: #fff !important;color:#000 !important;">View source</a></div>
       </div>
     </div>
   </div>
