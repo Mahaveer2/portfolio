@@ -1,6 +1,6 @@
 <script>
 	export let data;
-	const { projects.Reverse() } = data;
+	const projects = data.projects.reverse();
 	import Card from '$lib/components/Card.svelte';
 	import PageTransition from '../lib/components/PageTransition.svelte';
 </script>
