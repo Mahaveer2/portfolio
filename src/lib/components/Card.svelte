@@ -10,7 +10,7 @@
       <div class="p-p">
         <div style="flex-direction:column;justify-content:center;align-items:center;">
           <p>{description}</p>
-          <a href={link} class="btn primary" style="background-color: #fff !important;color:#000 !important;width:80%">View source</a>
+          <a href={link} class="btn primary" style="background-color: #fff !important;color:#000 !important;width:80%">View Demo</a>
         </div>
       </div>
     </div>
